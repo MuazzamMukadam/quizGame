@@ -8,6 +8,8 @@ let qnval = 1;
 const Chkoptions = document.querySelectorAll('input[name="same"]');
 let isSelected = false;
 let doneInd = [];
+let scoreEl = document.getElementById('score');
+let score = 0;
 const questions = [
   {
     question: "What is the capital of India?",
@@ -66,4 +68,5 @@ start();
 }else{
     alert('Please select an option');
 }
+
 }
