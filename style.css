@@ -8,6 +8,8 @@ body {
   justify-content: center; /* center vertically */
   align-items: center; /* center horizontally */
   gap: 20px; /* space between question and container */
+  padding-top: 60px;
+  overflow: hidden;
 }
 
 #qn {
@@ -18,19 +20,26 @@ body {
 }
 
 .container {
-  background: linear-gradient(to right, yellow, pink, cyan);
+  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
   padding: 20px;
-  border-radius: 10px;
-  width: 300px; /* or auto */
+  border-radius: 15px;
+  width: 300px;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
+
+.container:hover {
+  transform: scale(1.02);
+}
+
 
 label {
   display: inline-block; /* Aligns labels horizontally */
   margin-right: 20px; /* Adds space between options */
   margin-bottom: 10px; /* Provides spacing for vertical layout */
   padding: 8px 15px; /* Creates a more clickable area */
-  background: linear-gradient(to right, hotpink, black); /* Adds a sexy gradient */
+background-color:hotpink;
   border-radius: 8px; /* Softens the edges */
   color: white; /* Ensures text pops */
   font-weight: bold; /* Adds emphasis */
@@ -118,4 +127,19 @@ label:hover {
 .popup p {
   font-size: 1.2rem;
   color: #333;
+}
+.branding {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: hotpink;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }

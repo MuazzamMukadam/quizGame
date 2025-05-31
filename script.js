@@ -18,11 +18,6 @@ const questions = [
     answer: "Delhi",
   },
   {
-    question:"who does sohail mama think is hot?",
-    options: ["Maaz", "Zidaan", "Afzal", "Muazzam"],
-    answer: "Muazzam",
-  },
-  {
     question: "Which language runs in a web browser?",
     options: ["Java", "C", "Python", "JavaScript"],
     answer: "JavaScript",
@@ -100,7 +95,7 @@ function showPopup(){
     msg.innerHTML = `Correct Answers : ${score}<br> Wrong Answers : ${11-score}`;
 }
 function next(){
-    if(qnval == 11){
+    if(qnval == 10){
         showPopup();
         return;
     }
