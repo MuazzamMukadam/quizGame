@@ -11,7 +11,9 @@ body {
   padding-top: 60px;
   overflow: hidden;
 }
-
+#intro {
+  animation: fadeIn 1s ease-in-out;
+}
 #qn {
   font-size: 1.8rem;
   font-weight: 700;
@@ -27,6 +29,25 @@ body {
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#intro img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid hotpink;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
 }
 
 .container:hover {
