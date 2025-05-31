@@ -17,6 +17,11 @@ const questions = [
     answer: "Delhi",
   },
   {
+    question:"who does sohail mama think is hot?",
+    options: ["Maaz", "Zidaan", "Afzal", "Muazzam"],
+    answer: "Muazzam",
+  },
+  {
     question: "Which language runs in a web browser?",
     options: ["Java", "C", "Python", "JavaScript"],
     answer: "JavaScript",
@@ -30,6 +35,41 @@ const questions = [
       "Cars SUVs Sailboats",
     ],
     answer: "Cascading Style Sheets",
+  },
+   {
+    question: "What does CPU stand for?",
+    options: ["Central Processing Unit", "Computer Personal Unit", "Central Programming Unit", "Control Processing Unit"],
+    answer: "Central Processing Unit",
+  },
+  {
+    question: "Which data structure uses FIFO (First In First Out)?",
+    options: ["Stack", "Queue", "Tree", "Graph"],
+    answer: "Queue",
+  },
+  {
+    question: "What is the time complexity of binary search in a sorted array?",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    answer: "O(log n)",
+  },
+  {
+    question: "Which of these is a non-volatile memory?",
+    options: ["RAM", "ROM", "Cache", "Register"],
+    answer: "ROM",
+  },
+  {
+    question: "Which protocol is used to transfer web pages?",
+    options: ["FTP", "SMTP", "HTTP", "SNMP"],
+    answer: "HTTP",
+  },
+  {
+    question: "What is the full form of SQL?",
+    options: ["Structured Question Language", "Strong Query Language", "Structured Query Language", "Standard Query Logic"],
+    answer: "Structured Query Language",
+  },
+  {
+    question: "Which logic gate gives a true output only when both inputs are false?",
+    options: ["AND", "OR", "NOR", "NAND"],
+    answer: "NOR",
   },
 ];
 function start(){
@@ -54,19 +94,34 @@ function play() {
   
 }
 function next(){
-for (const option of Chkoptions) {
-  if (option.checked) {
-    isSelected = true;
-    break;
+  let selectedAnswer = null;
+  for (const option of Chkoptions) {
+    if (option.checked) {
+      selectedAnswer = option.nextSibling.innerText; // Get the selected answer text
+      isSelected = true;
+      break;
+    }
   }
-}
-if(isSelected){
-qn.innerText = ++qnval;
-isSelected = false;
-Chkoptions.forEach(option => option.checked = false);
-start();
-}else{
-    alert('Please select an option');
-}
 
+  if (isSelected) {
+    const currentQnIndex = doneInd[doneInd.length - 1]; // Get the last shown question index
+    if (selectedAnswer === questions[currentQnIndex].answer) {
+document.body.style.background = "linear-gradient(to right, green, black)";
+        setTimeout(()=>{
+ document.body.style.background = "white";
+        },1000);
+      score++; // Increase score if correct
+      scoreEl.innerText = score; // Update score display
+    }else{
+document.body.style.background = "linear-gradient(to right, darkred, red, black)";
+        setTimeout(()=>{
+ document.body.style.background = "white";
+        },1000);}
+    qn.innerText = ++qnval; // Move to the next question
+    isSelected = false;
+    Chkoptions.forEach(option => option.checked = false);
+    start();
+  } else {
+    alert('Please select an option');
+  }
 }
