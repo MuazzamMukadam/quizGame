@@ -1,7 +1,7 @@
 
 
 
-
+let btn = document.getElementById('replay');
 const optionsEl = document.querySelectorAll('#options label');
 let qn = document.getElementById('qn');
 let qnval = 1;
@@ -10,6 +10,7 @@ let isSelected = false;
 let doneInd = [];
 let scoreEl = document.getElementById('score');
 let score = 0;
+let msg = document.getElementById('txt');
 const questions = [
   {
     question: "What is the capital of India?",
@@ -88,12 +89,21 @@ node.querySelector('span').innerText = questions[ranInd].options[i];
 }
 
 function play() {
+     document.querySelector('.popup').style.display = 'none';
   document.getElementById("intro").style.display = "none";
   document.querySelector(".main").style.display = "block";
   start();
   
 }
+function showPopup(){
+    document.querySelector('.popup').style.display = 'block';
+    msg.innerHTML = `Correct Answers : ${score}<br> Wrong Answers : ${11-score}`;
+}
 function next(){
+    if(qnval == 11){
+        showPopup();
+        return;
+    }
   let selectedAnswer = null;
   for (const option of Chkoptions) {
     if (option.checked) {
@@ -106,7 +116,7 @@ function next(){
   if (isSelected) {
     const currentQnIndex = doneInd[doneInd.length - 1]; // Get the last shown question index
     if (selectedAnswer === questions[currentQnIndex].answer) {
-document.body.style.background = "linear-gradient(to right, green, black)";
+document.body.style.background = "linear-gradient(to right, green, white)";
         setTimeout(()=>{
  document.body.style.background = "white";
         },1000);
@@ -125,3 +135,12 @@ document.body.style.background = "linear-gradient(to right, darkred, red, black)
     alert('Please select an option');
   }
 }
+btn.addEventListener('click',()=>{
+    qn.innerText = 1;
+    scoreEl.innerText = 0;
+    qnval = 1;
+    score=0;
+    doneInd = [];
+    document.getElementById("intro").style.display = "block";
+  document.querySelector(".main").style.display = "none";
+});

@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  background-color: hotpink;
+  background: linear-gradient(to right, yellow, pink, cyan);
   padding: 20px;
   border-radius: 10px;
   width: 300px; /* or auto */
@@ -26,58 +26,96 @@ body {
 }
 
 label {
-  display: inline-block; /* or block for vertical stacking */
-  margin-right: 20px; /* space between options horizontally */
-  margin-bottom: 10px; /* space if vertical */
+  display: inline-block; /* Aligns labels horizontally */
+  margin-right: 20px; /* Adds space between options */
+  margin-bottom: 10px; /* Provides spacing for vertical layout */
+  padding: 8px 15px; /* Creates a more clickable area */
+  background: linear-gradient(to right, hotpink, black); /* Adds a sexy gradient */
+  border-radius: 8px; /* Softens the edges */
+  color: white; /* Ensures text pops */
+  font-weight: bold; /* Adds emphasis */
+  cursor: pointer; /* Makes it feel interactive */
+  transition: all 0.3s ease-in-out; /* Smooth hover effects */
 }
-.main{
-    display: none;
+
+label:hover {
+  background: linear-gradient(to right, black, hotpink); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slight enlargement for effect */
+  box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.7); /* Glowing effect */
 }
-#score{
-    color: hotpink;
+
+.main {
+  display: none;
+}
+#score {
+  color: hotpink;
 }
 
 .btn {
- padding: 1.1em 2em;
- background: none;
- border: 2px solid #fff;
- font-size: 15px;
- color: #131313;
- cursor: pointer;
- position: relative;
- overflow: hidden;
- transition: all 0.3s;
- border-radius: 12px;
- background-color: #ecd448;
- font-weight: bolder;
- box-shadow: 0 2px 0 2px #000;
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 15px;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #ecd448;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px #000;
 }
 
 .btn:before {
- content: "";
- position: absolute;
- width: 100px;
- height: 120%;
- background-color: #ff6700;
- top: 50%;
- transform: skewX(30deg) translate(-150%, -50%);
- transition: all 0.5s;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #ff6700;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
 }
 
 .btn:hover {
- background-color: #4cc9f0;
- color: #fff;
- box-shadow: 0 2px 0 2px #0d3b66;
+  background-color: #4cc9f0;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
 }
 
 .btn:hover::before {
- transform: skewX(30deg) translate(150%, -50%);
- transition-delay: 0.1s;
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
 }
 
 .btn:active {
- transform: scale(0.9);
+  transform: scale(0.9);
 }
-#submit{
-    margin-top: 10px;
+#submit {
+  margin-top: 10px;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 999;
+  display: none;
+}
+
+.popup h3 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: hotpink;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  color: #333;
 }
