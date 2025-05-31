@@ -1,0 +1,35 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
+  gap: 20px; /* space between question and container */
+}
+
+#qn {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hotpink;
+  text-align: center;
+}
+
+.container {
+  background-color: hotpink;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* or auto */
+  text-align: center;
+}
+
+label {
+  display: inline-block; /* or block for vertical stacking */
+  margin-right: 20px; /* space between options horizontally */
+  margin-bottom: 10px; /* space if vertical */
+}
+.main{
+    display: none;
+}
