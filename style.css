@@ -33,13 +33,12 @@ body {
   transform: scale(1.02);
 }
 
-
 label {
   display: inline-block; /* Aligns labels horizontally */
   margin-right: 20px; /* Adds space between options */
   margin-bottom: 10px; /* Provides spacing for vertical layout */
   padding: 8px 15px; /* Creates a more clickable area */
-background-color:hotpink;
+  background-color: hotpink;
   border-radius: 8px; /* Softens the edges */
   color: white; /* Ensures text pops */
   font-weight: bold; /* Adds emphasis */
@@ -48,7 +47,11 @@ background-color:hotpink;
 }
 
 label:hover {
-  background: linear-gradient(to right, black, hotpink); /* Reverse gradient on hover */
+  background: linear-gradient(
+    to right,
+    black,
+    hotpink
+  ); /* Reverse gradient on hover */
   transform: scale(1.1); /* Slight enlargement for effect */
   box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.7); /* Glowing effect */
 }
