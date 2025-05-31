@@ -98,8 +98,8 @@ function play() {
 }
 function showPopup() {
   document.querySelector(".popup").style.display = "block";
-  msg.innerHTML = `Correct Answers : ${score}<br> Wrong Answers : ${
-    11 - score
+  msg.innerHTML = `Correct Answers : ${score+1}<br> Wrong Answers : ${
+    9 - score
   }`;
 }
 function next() {
