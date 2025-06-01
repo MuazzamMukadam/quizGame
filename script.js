@@ -58,8 +58,57 @@ const questions = [
     question: "Which anime features a notebook that can kill anyone whose name is written in it?",
     options: ["Death Parade", "Psycho-Pass", "Death Note", "Another"],
     answer: "Death Note"
+  },
+  {
+    question: "What is the real name of the main character who finds the Death Note?",
+    options: ["Ryuk", "Light Yagami", "L Lawliet", "Near"],
+    answer: "Light Yagami"
+  },
+  {
+    question: "Who is the Shinigami that drops the Death Note into the human world?",
+    options: ["Rem", "Ryuk", "Gelus", "Sidoh"],
+    answer: "Ryuk"
+  },
+  {
+    question: "What is the default method of death if not specified in the Death Note?",
+    options: ["Suicide", "Heart attack", "Accident", "Poisoning"],
+    answer: "Heart attack"
+  },
+  {
+    question: "What alias does Light Yagami use when acting as a vigilante?",
+    options: ["Killer", "Justice", "Kira", "Zero"],
+    answer: "Kira"
+  },
+  {
+    question: "What is L's full name?",
+    options: ["L Lawliet", "L Ryuzaki", "L Takada", "L Near"],
+    answer: "L Lawliet"
+  },
+  {
+    question: "What is the name of the girl who becomes the second Kira?",
+    options: ["Sayu Yagami", "Naomi Misora", "Misa Amane", "Kiyomi Takada"],
+    answer: "Misa Amane"
+  },
+  {
+    question: "What must a person know to kill someone using the Death Note?",
+    options: ["Their favorite food and birthday", "Their face and real name", "Their phone number", "Their blood type"],
+    answer: "Their face and real name"
+  },
+  {
+    question: "Who kills L in the series?",
+    options: ["Ryuk", "Light", "Rem", "Misa"],
+    answer: "Rem"
+  },
+  {
+    question: "Which organization does L work with to catch Kira?",
+    options: ["Interpol", "SPK", "Task Force", "Wammy's House"],
+    answer: "Task Force"
+  },
+  {
+    question: "How does Light Yagami die at the end of the series?",
+    options: ["He is killed by Ryuk", "He is arrested", "He commits suicide", "He escapes"],
+    answer: "He is killed by Ryuk"
   }
-
 ];
 function start() {
   const ranInd = Math.floor(Math.random() * questions.length);
@@ -88,7 +137,7 @@ function showPopup() {
   }`;
 }
 function next() {
-  if (qnval == 10) {
+  if (qnval == 20) {
     showPopup();
     return;
   }
