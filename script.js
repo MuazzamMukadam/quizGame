@@ -10,71 +10,56 @@ let score = 0;
 let msg = document.getElementById("txt");
 const questions = [
   {
-    question: "In 'Death Note', what is the Shinigami's name who dropped the notebook?",
-  options: ["Ryuk", "Rem", "Goku", "L"],
-  answer: "Ryuk",
+    question: "What is the name of the main protagonist in 'Naruto'?",
+    options: ["Sasuke Uchiha", "Naruto Uzumaki", "Kakashi Hatake", "Itachi Uchiha"],
+    answer: "Naruto Uzumaki"
   },
   {
-    question: "Which language runs in a web browser?",
-    options: ["Java", "C", "Python", "JavaScript"],
-    answer: "JavaScript",
+    question: "Which anime features the 'Survey Corps'?",
+    options: ["Bleach", "Attack on Titan", "Fullmetal Alchemist", "Demon Slayer"],
+    answer: "Attack on Titan"
   },
   {
-    question: "What does CSS stand for?",
-    options: [
-      "Central Style Sheets",
-      "Cascading Style Sheets",
-      "Cascading Simple Sheets",
-      "Cars SUVs Sailboats",
-    ],
-    answer: "Cascading Style Sheets",
+    question: "What is the name of the pirate crew led by Monkey D. Luffy?",
+    options: ["Blackbeard Pirates", "Heart Pirates", "Straw Hat Pirates", "Red-Haired Pirates"],
+    answer: "Straw Hat Pirates"
   },
   {
-    question: "What does CPU stand for?",
-    options: [
-      "Central Processing Unit",
-      "Computer Personal Unit",
-      "Central Programming Unit",
-      "Control Processing Unit",
-    ],
-    answer: "Central Processing Unit",
+    question: "Who is the main character in 'Death Note'?",
+    options: ["Light Yagami", "L Lawliet", "Ryuk", "Near"],
+    answer: "Light Yagami"
   },
   {
-    question: "Which data structure uses FIFO (First In First Out)?",
-    options: ["Stack", "Queue", "Tree", "Graph"],
-    answer: "Queue",
+    question: "What kind of creature is Kurama in 'Naruto'?",
+    options: ["A snake", "A dragon", "A fox", "A wolf"],
+    answer: "A fox"
   },
   {
-    question: "What is the time complexity of binary search in a sorted array?",
-    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
-    answer: "O(log n)",
+    question: "Which anime features alchemy as a central theme?",
+    options: ["Tokyo Ghoul", "Bleach", "Fullmetal Alchemist", "One Piece"],
+    answer: "Fullmetal Alchemist"
   },
   {
-    question: "Which of these is a non-volatile memory?",
-    options: ["RAM", "ROM", "Cache", "Register"],
-    answer: "ROM",
+    question: "In 'Dragon Ball Z', who is Goku’s rival and prince of the Saiyans?",
+    options: ["Piccolo", "Gohan", "Frieza", "Vegeta"],
+    answer: "Vegeta"
   },
   {
-    question: "Which protocol is used to transfer web pages?",
-    options: ["FTP", "SMTP", "HTTP", "SNMP"],
-    answer: "HTTP",
+    question: "What anime has a character named Tanjiro Kamado?",
+    options: ["Black Clover", "Demon Slayer", "Fairy Tail", "Inuyasha"],
+    answer: "Demon Slayer"
   },
   {
-    question: "What is the full form of SQL?",
-    options: [
-      "Structured Question Language",
-      "Strong Query Language",
-      "Structured Query Language",
-      "Standard Query Logic",
-    ],
-    answer: "Structured Query Language",
+    question: "What is the profession of Saitama in 'One Punch Man'?",
+    options: ["Assassin", "Hero", "Martial Artist", "Teacher"],
+    answer: "Hero"
   },
   {
-    question:
-      "Which logic gate gives a true output only when both inputs are false?",
-    options: ["AND", "OR", "NOR", "NAND"],
-    answer: "NOR",
-  },
+    question: "Which anime features a notebook that can kill anyone whose name is written in it?",
+    options: ["Death Parade", "Psycho-Pass", "Death Note", "Another"],
+    answer: "Death Note"
+  }
+
 ];
 function start() {
   const ranInd = Math.floor(Math.random() * questions.length);
