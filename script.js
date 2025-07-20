@@ -10,106 +10,62 @@ let score = 0;
 let msg = document.getElementById("txt");
 const questions = [
   {
-    question: "What is the name of the main protagonist in 'Naruto'?",
-    options: ["Sasuke Uchiha", "Naruto Uzumaki", "Kakashi Hatake", "Itachi Uchiha"],
-    answer: "Naruto Uzumaki"
+    question: "In 'Death Note', what is the Shinigami's name who dropped the notebook?",
+    options: ["Ryuk", "Rem", "Goku", "L"],
+    answer: "Ryuk",
   },
   {
-    question: "Which anime features the 'Survey Corps'?",
-    options: ["Bleach", "Attack on Titan", "Fullmetal Alchemist", "Demon Slayer"],
-    answer: "Attack on Titan"
+    question: "Which Avenger sacrificed themselves to obtain the Soul Stone in Endgame?",
+    options: ["Iron Man", "Hawkeye", "Captain America", "Black Widow"],
+    answer: "Black Widow",
   },
   {
-    question: "What is the name of the pirate crew led by Monkey D. Luffy?",
-    options: ["Blackbeard Pirates", "Heart Pirates", "Straw Hat Pirates", "Red-Haired Pirates"],
-    answer: "Straw Hat Pirates"
+    question: "In 'Interstellar', what is the name of the planet with huge tidal waves?",
+    options: ["Miller's Planet", "Mann's Planet", "Earth", "Edmunds' Planet"],
+    answer: "Miller's Planet",
   },
   {
-    question: "Who is the main character in 'Death Note'?",
-    options: ["Light Yagami", "L Lawliet", "Ryuk", "Near"],
-    answer: "Light Yagami"
+    question: "Which language is primarily used for Android app development?",
+    options: ["Kotlin", "Swift", "Python", "Ruby"],
+    answer: "Kotlin",
   },
   {
-    question: "What kind of creature is Kurama in 'Naruto'?",
-    options: ["A snake", "A dragon", "A fox", "A wolf"],
-    answer: "A fox"
+    question: "Who is the main antagonist in 'Avengers: Endgame'?",
+    options: ["Thanos", "Ultron", "Loki", "Red Skull"],
+    answer: "Thanos",
   },
   {
-    question: "Which anime features alchemy as a central theme?",
-    options: ["Tokyo Ghoul", "Bleach", "Fullmetal Alchemist", "One Piece"],
-    answer: "Fullmetal Alchemist"
+    question: "What is the time complexity of binary search in a sorted array?",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    answer: "O(log n)",
   },
   {
-    question: "In 'Dragon Ball Z', who is Goku’s rival and prince of the Saiyans?",
-    options: ["Piccolo", "Gohan", "Frieza", "Vegeta"],
-    answer: "Vegeta"
+    question: "Which anime character said: 'I'll take a potato chip... and eat it!'?",
+    options: ["Light Yagami", "L", "Ryuk", "Near"],
+    answer: "Light Yagami",
   },
   {
-    question: "What anime has a character named Tanjiro Kamado?",
-    options: ["Black Clover", "Demon Slayer", "Fairy Tail", "Inuyasha"],
-    answer: "Demon Slayer"
+    question: "What does CSS stand for?",
+    options: [
+      "Central Style Sheets",
+      "Cascading Style Sheets",
+      "Cascading Simple Sheets",
+      "Cars SUVs Sailboats",
+    ],
+    answer: "Cascading Style Sheets",
   },
   {
-    question: "What is the profession of Saitama in 'One Punch Man'?",
-    options: ["Assassin", "Hero", "Martial Artist", "Teacher"],
-    answer: "Hero"
+    question: "Which data structure uses FIFO (First In First Out)?",
+    options: ["Stack", "Queue", "Tree", "Graph"],
+    answer: "Queue",
   },
   {
-    question: "Which anime features a notebook that can kill anyone whose name is written in it?",
-    options: ["Death Parade", "Psycho-Pass", "Death Note", "Another"],
-    answer: "Death Note"
+    question: "What is the capital of Japan?",
+    options: ["Kyoto", "Seoul", "Tokyo", "Osaka"],
+    answer: "Tokyo",
   },
-  {
-    question: "What is the real name of the main character who finds the Death Note?",
-    options: ["Ryuk", "Light Yagami", "L Lawliet", "Near"],
-    answer: "Light Yagami"
-  },
-  {
-    question: "Who is the Shinigami that drops the Death Note into the human world?",
-    options: ["Rem", "Ryuk", "Gelus", "Sidoh"],
-    answer: "Ryuk"
-  },
-  {
-    question: "What is the default method of death if not specified in the Death Note?",
-    options: ["Suicide", "Heart attack", "Accident", "Poisoning"],
-    answer: "Heart attack"
-  },
-  {
-    question: "What alias does Light Yagami use when acting as a vigilante?",
-    options: ["Killer", "Justice", "Kira", "Zero"],
-    answer: "Kira"
-  },
-  {
-    question: "What is L's full name?",
-    options: ["L Lawliet", "L Ryuzaki", "L Takada", "L Near"],
-    answer: "L Lawliet"
-  },
-  {
-    question: "What is the name of the girl who becomes the second Kira?",
-    options: ["Sayu Yagami", "Naomi Misora", "Misa Amane", "Kiyomi Takada"],
-    answer: "Misa Amane"
-  },
-  {
-    question: "What must a person know to kill someone using the Death Note?",
-    options: ["Their favorite food and birthday", "Their face and real name", "Their phone number", "Their blood type"],
-    answer: "Their face and real name"
-  },
-  {
-    question: "Who kills L in the series?",
-    options: ["Ryuk", "Light", "Rem", "Misa"],
-    answer: "Rem"
-  },
-  {
-    question: "Which organization does L work with to catch Kira?",
-    options: ["Interpol", "SPK", "Task Force", "Wammy's House"],
-    answer: "Task Force"
-  },
-  {
-    question: "How does Light Yagami die at the end of the series?",
-    options: ["He is killed by Ryuk", "He is arrested", "He commits suicide", "He escapes"],
-    answer: "He is killed by Ryuk"
-  }
 ];
+
 function start() {
   const ranInd = Math.floor(Math.random() * questions.length);
   if (!doneInd.includes(ranInd)) {
@@ -137,7 +93,7 @@ function showPopup() {
   }`;
 }
 function next() {
-  if (qnval == 20) {
+  if (qnval == 10) {
     showPopup();
     return;
   }
